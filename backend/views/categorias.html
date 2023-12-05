@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Manuel Achaval">
+    <meta name="description" content="Mi tienda: Formulario de carga de categorías.">
+    <meta name="keywords" content="computadoras, tecnología, mouse, teclado, monitores">
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="nofollow">
+    <link rel="stylesheet" href="/assets/estilos.css">
+    <title>Mi tienda | Categorias</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/views/home.html">Inicio</a></li>
+                <li><a href="/backend/views/lista_productos.html">Productos</a></li>
+                <li><a href="/backend/views/productos.html">Alta productos</a></li>
+                <li><a href="/backend/views/lista_categorias.html">Categorias</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form id="form-carga-categorias" action="" method="post" autocomplete="on">
+                <label for="nombre-categoria">Nombre</label>
+                    <input type="search" name="nombre-categoria" id="nombre-categoria" placeholder="Ejemplo: Mouse" pattern="[a-zA-Z]*" required>
+                    <p><i>Por favor ingrese solo letras, no se permiten caracteres especiales o numeros</i></p>
+                <div id="form-categoria-botones">
+                    <input id="categorias-reset"  class="button" type="reset">
+                    <button id="categorias-cancelar" class="button" type="button">Cancelar</button>
+                    <input type="submit" id="categorias-submit" class="button">
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
