@@ -9,7 +9,7 @@
     <meta name="keywords" content="computadoras, tecnología, mouse, teclado, monitores">
     <meta name="robots" content="noindex">
     <meta name="robots" content="nofollow">
-    <link rel="stylesheet" href="/assets/estilos.css">
+    <link rel="stylesheet" href="/assets/estilos/estilos.css">
     <title>Mi tienda | Categorias</title>
 </head>
 
@@ -21,18 +21,23 @@
                 <li><a href="/backend/views/lista_productos.html">Productos</a></li>
                 <li><a href="/backend/views/productos.html">Alta productos</a></li>
                 <li><a href="/backend/views/lista_categorias.html">Categorias</a></li>
+                <li><a href="/backend/views/categorias.html">Alta Categorias</a></li>
+
+
 
             </ul>
         </nav>
     </header>
     <main>
+        <h1>Carga Categorías</h1>
         <section>
             <form id="form-carga-categorias" action="" method="post" autocomplete="on">
                 <label for="nombre-categoria">Nombre</label>
-                    <input type="search" name="nombre-categoria" id="nombre-categoria" placeholder="Ejemplo: Mouse" pattern="[a-zA-Z]*" required>
-                    <p><i>Por favor ingrese solo letras, no se permiten caracteres especiales o numeros</i></p>
+                <input type="search" name="nombre-categoria" id="nombre-categoria" placeholder="Ejemplo: Mouse"
+                    pattern="[a-zA-Z]*" required>
+                <p><i>Por favor ingrese solo letras, no se permiten caracteres especiales o números</i></p>
                 <div id="form-categoria-botones">
-                    <input id="categorias-reset"  class="button" type="reset">
+                    <input id="categorias-reset" class="button" type="reset">
                     <button id="categorias-cancelar" class="button" type="button">Cancelar</button>
                     <input type="submit" id="categorias-submit" class="button">
                 </div>
@@ -40,7 +45,12 @@
         </section>
 
     </main>
-
+    <footer>
+        <span>Manuel Achaval Copyright  © 2023</span>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/assets/js/validaciones.js"></script>
 </body>
 
 </html>

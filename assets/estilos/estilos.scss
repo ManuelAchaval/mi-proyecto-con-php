@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #cfcfcf;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    form {
+        margin: 20px;
+        padding: 20px 10px;
+        background-color: #EAEAEA;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid;
+        border-radius: 5px;
+
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.63);
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px;
+
+            input,
+            textarea {
+                margin: 10px
+            }
+
+        }
+    }
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #EAEAEA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    span{
+        margin: 20px;
+        
+    }
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 5px;
+    background-color: #0F233C;
+    list-style: none;
+
+    li {
+        background-color: #EAEAEA;
+        padding: 8px;
+        border-radius: 10px;
+
+        :hover {
+            text-decoration: underline;
+            color: #EA1B25;
+        }
+
+        a {
+            color: #060606;
+            text-decoration: none;
+
+        }
+
+    }
+}
+
+#form-producto-botones, #form-categoria-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    :hover {
+        background-color: #969696bd;
+
+        color: #000;
+
+    }
+
+    input,
+    button {
+        padding: 10px;
+        background-color: #EA1B25;
+        color: #fff;
+        border-style: none;
+        border-radius: 10px;
+
+    }
+}
+
+#productos-submit:hover, #categorias-submit:hover{
+    background-color: #67A665;
+}
+#productos-reset:hover, #categorias-reset:hover{
+    background-color: #2764A9;
+    color:#EAEAEA;
+}
+/*
+    colores 
+    fondo oscuro #0F233C
+    fondo boton #EA1B25 rojo
+    un fondo gris #EAEAEA
+
+    para link no seleccionado #969696
+    para link seleccionado#ea1b25
+*/
