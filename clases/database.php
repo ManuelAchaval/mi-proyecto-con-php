@@ -1,6 +1,6 @@
 <?php
 try {
-    $conector = new PDO("mysql:dbname=miproyecto;host=127.0.0.1", "root", "");
+    $conector = new PDO("mysql:dbname=miproyecto2;host=127.0.0.1", "root", "");
     echo"Conexion exitosa";
 } catch (Exception $ex) {
     echo "Falló de conexion" . $ex->getMessage();
