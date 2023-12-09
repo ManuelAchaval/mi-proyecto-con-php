@@ -14,7 +14,7 @@ class Autoload{
                 include $classArr[$class];
 
             }else{
-                throw new Exception("La clase ".$classArr[$class]" es inexistente.");
+                throw new Exception("La clase ". $classArr[$class]." es inexistente.");
 
             }
         }

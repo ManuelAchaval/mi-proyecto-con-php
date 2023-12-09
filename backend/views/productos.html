@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/estilos/estilos.css">
+    <link rel="stylesheet" href="../../assets/estilos/estilos.css">
     <title>Productos</title>
 </head>
 
@@ -12,11 +12,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="/views/home.html">Inicio</a></li>
-                <li><a href="/backend/views/lista_productos.html">Productos</a></li>
-                <li><a href="/backend/views/productos.html" >Alta Productos</a></li>
-                <li><a href="/backend/views/lista_categorias.html">Categorias</a></li>
-                <li><a href="/backend/views/categorias.html">Alta Categorias</a></li>
+                <li><a href="../../views/home.html">Inicio</a></li>
+                <li><a href="./lista_productos.html">Productos</a></li>
+                <li><a href="./productos.html">Alta productos</a></li>
+                <li><a href="./lista_categorias.html">Categorias</a></li>
+                <li><a href="./categorias.html">Alta Categorias</a></li>
             </ul>
         </nav>
     </header>
@@ -25,24 +25,28 @@
         <section>
             <form id="form-carga-productos" action="" method="post" autocomplete="on">
                 <div>
-                    <label for="nombre-producto">Nombre: </label>
-                    <input type="search" name="nombre-producto" id="nombre-producto">
+                    <label for="nombre_producto">Nombre: </label>
+                    <input type="search" name="nombre_producto" id="nombre_producto">
                 </div>
                 <div>
-                    <label for="descripcion-producto">Descripción: </label>
-                    <textarea name="descripcion-producto" id="descripcion-producto" cols="30" rows="10"></textarea>
+                    <label for="descripcion_producto">Descripción: </label>
+                    <textarea name="descripcion_producto" id="descripcion_producto" cols="30" rows="10"></textarea>
                 </div>
                 <div>
-                    <label for="precio-producto">Precio: </label>
-                    <input type="number" name="precio-producto" id="precio-producto">
+                    <label for="precio_producto">Precio: </label>
+                    <input type="number" name="precio_producto" id="precio_producto">
                 </div>
                 <div>
-                    <label for="categoria-producto">Categoría: </label>
-                    <input type="text" name="categoria-producto" id="categoria-producto" placeholder="Ejemplo: Teclado">
+                    <label for="categoria_producto">Categoría: </label>
+                    <input type="text" name="categoria_producto" id="categoria_producto" placeholder="Ejemplo: Teclado">
                 </div>
                 <div>
-                    <label for="imagen-producto">Imagen: </label>
-                    <input type="file" name="imagen-producto" accept="image/*" id="imagen-producto">
+                    <label for="imagen_producto">Imagen: </label>
+                    <input type="file" name="imagen_producto" accept="image/*" id="imagen_producto">
+                </div>
+                <div style="align-items: center;margin-left: 100px;">
+                    <iframe src="http://localhost/MIPROYECTO_/backend/categorias.php" frameborder="0"
+                        height="300px" style="display: block;"></iframe>
                 </div>
                 <div id="form-producto-botones">
                     <input id="productos-reset" class="button" type="reset">

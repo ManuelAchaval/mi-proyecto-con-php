@@ -1,25 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=D, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/estilos/estilos.css">
+    <link rel="stylesheet" href="../../assets/estilos/estilos.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="/views/home.html">Inicio</a></li>
-                <li><a href="/backend/views/lista_productos.html">Productos</a></li>
-                <li><a href="/backend/views/productos.html">Alta productos</a></li>
-                <li><a href="/backend/views/lista_categorias.html">Categorias</a></li>
-                <li><a href="/backend/views/categorias.html">Alta Categorias</a></li>
+                <li><a href="../../views/home.html">Inicio</a></li>
+                <li><a href="./lista_productos.html">Productos</a></li>
+                <li><a href="./productos.html">Alta productos</a></li>
+                <li><a href="./lista_categorias.html">Categorias</a></li>
+                <li><a href="./categorias.html">Alta Categorias</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($listaProductos as $producto){ ?>
+                    <tr>
+                        <td>
+                            <?php echo $producto['id'] ?>
+                        </td>
+                        <td>
+                            <?php echo isset($producto['nombre_producto']) ? $producto['nombre_producto'] : 'N/A'; ?>
+                        </td>
+                        <td>
+                            <?php echo $producto['descripcion_producto'] ?>
+                        </td>
+                        <td>
+                            <?php echo $producto['precio_producto'] ?>
+                        </td>
+                        <td>
+                            <?php echo $producto['imagen_producto'] ?>
+                        </td>
+                        <td>
+                            <?php echo $producto['categoria_id'] ?>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="../views/productos.html">Agregar producto</a>
+
+    </main>
     <footer>
-        <span>Manuel Achaval Copyright  © 2023</span>
+        <span>Manuel Achaval Copyright © 2023</span>
     </footer>
 </body>
+
 </html>

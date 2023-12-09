@@ -41,7 +41,7 @@ class Categorias{
     }
     public function category_insert(){
         $db= new database(DRIVER,DB,HOST,USER,PASS);
-        return $db->insert(TABLE,"nombre_categoria=? ","id=?",array($this->nombre));
+        return $db->insert(TABLE,"nombre-categoria=? ","id=?",array($this->nombre));
         
         if($response){
             $this->id=$response;
@@ -52,7 +52,7 @@ class Categorias{
 
     public function category_update(){
         $db= new database(DRIVER,DB,HOST,USER,PASS);
-        return $db->update(TABLE,"nombre_categoria=? ","id=?",array($this->nombre));
+        return $db->update(TABLE,"nombre-categoria=? ","id=?",array($this->nombre));
         
     }
     static public function category_select(){

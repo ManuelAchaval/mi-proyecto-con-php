@@ -21,11 +21,11 @@ class Productos{
         if(isset($response[0]['id'])){
             $this->id= $response[0]['id'];
             $this-> nombre = $response[0]['nombre-producto'];
-            $this->descripcion= $response[0]['descripcion-producto'];
-            $this->precio = $response[0]['precio-producto'];
-            $this->categoria = $response[0]['categoria-producto'];
-            $this->imagen = $response[0]['imagen-producto'];
-            $this->exists = true;
+            $this-> descripcion = $response[0]['descripcion-producto'];
+            $this-> precio = $response[0]['precio-producto'];
+            $this-> categoria = $response[0]['categoria-producto'];
+            $this-> imagen = $response[0]['imagen-producto'];
+            $this-> xists = true;
         }else{
             return false;
         }
@@ -53,8 +53,8 @@ class Productos{
 
     private function product_insert(){
         $db= new database(DRIVER,DB,HOST,USER,PASS);
-        $response= $db ->insert(TABLA, "nombre_producto=?, descripcion_producto=?,
-        precio_producto=?, categoria_producto, imagen_producto=?","?,?,?,?",array($this->nombre,$this->descripcion,$this->precio,$this->categoria, $this->imagen));
+        $response= $db ->insert(TABLA, "nombre-producto=?, descripcion-producto=?,
+        precio-producto=?, categoria-producto, imagen-producto=?","?,?,?,?",array($this->nombre,$this->descripcion,$this->precio,$this->categoria, $this->imagen));
 
         if($response){
             $this->id=$response;
@@ -66,8 +66,8 @@ class Productos{
     }
     private function product_update(){
         $db= new database(DRIVER,DB,HOST,USER,PASS);
-        return $db-> update(TABLE,"nombre_producto=?, descripcion_producto=?,
-        precio_producto=?, categoria_producto, imagen_producto=?","?,?,?,?",array($this->nombre,$this->descripcion,$this->precio,$this->categoria, $this->imagen));
+        return $db-> update(TABLE,"nombre-producto=?, descripcion-producto=?,
+        precio_producto=?, categoria-producto, imagen-producto=?","?,?,?,?",array($this->nombre,$this->descripcion,$this->precio,$this->categoria, $this->imagen));
 
     }
 

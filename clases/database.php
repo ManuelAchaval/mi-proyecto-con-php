@@ -1,10 +1,10 @@
 <?php
-try {
-    $conector = new PDO("mysql:dbname=miproyecto2;host=127.0.0.1", "root", "");
-    echo"Conexion exitosa";
-} catch (Exception $ex) {
-    echo "Falló de conexion" . $ex->getMessage();
-}
+// try {
+//     $conector = new PDO("mysql:dbname=miproyecto2;host=127.0.0.1", "root", "");
+//     echo"Conexion exitosa";
+// } catch (Exception $ex) {
+//     echo "Falló de conexion" . $ex->getMessage();
+// }
 
 class database {
     private $gbd;
@@ -23,7 +23,7 @@ class database {
         if($filtros!=null){$sql .= " WHERE " . $filtros;}
         if($order!=null){$sql .= " ORDER BY " . $order;}
         if($limit!=null) {$sql .= " LIMIT " .$limit;}
-        $resource=$this_>gbd->prepare($sql);
+        $resource=$this->gbd->prepare($sql);
         $resource->execute($arr_prepare);
 
         if ($resource){return $resource ->fetchAll(PDO:: FETCH_ASSOC);}
@@ -50,7 +50,7 @@ class database {
             throw new Exception('Error al eliminar.');
         }
     }
-    function insert($tabla, $campos,$valores,$arr_prepare=null,) {
+    function insert($tabla, $campos,$valores,$arr_prepare=null) {
         $sql="INSERT INTO ". $tabla. "(" . $campos . ") VALUES ($valores)";
         
         $resource=$this->gbd-> prepare(sql);

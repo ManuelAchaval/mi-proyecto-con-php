@@ -4,6 +4,11 @@
   scroll-behavior: smooth;
 }
 
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
   background-color: #cfcfcf;
   font-family: Arial, Helvetica, sans-serif;
@@ -14,7 +19,9 @@ main {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  margin-bottom: 100px;
 }
+
 main form {
   margin: 20px;
   padding: 20px 10px;
@@ -26,12 +33,14 @@ main form {
   border-radius: 5px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.63);
 }
+
 main form div {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 10px;
 }
+
 main form div input,
 main form div textarea {
   margin: 10px;
@@ -39,6 +48,7 @@ main form div textarea {
 
 footer {
   position: absolute;
+
   bottom: 0;
   width: 100%;
   background-color: #EAEAEA;
@@ -46,6 +56,7 @@ footer {
   flex-direction: row;
   justify-content: center;
 }
+
 footer span {
   margin: 20px;
 }
@@ -58,31 +69,39 @@ nav ul {
   background-color: #0F233C;
   list-style: none;
 }
+
 nav ul li {
   background-color: #EAEAEA;
   padding: 8px;
   border-radius: 10px;
 }
+
 nav ul li :hover {
   text-decoration: underline;
   color: #EA1B25;
 }
+
 nav ul li a {
   color: #060606;
   text-decoration: none;
 }
 
-#form-producto-botones, #form-categoria-botones {
+#form-producto-botones,
+#form-categoria-botones {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-#form-producto-botones :hover, #form-categoria-botones :hover {
+
+#form-producto-botones :hover,
+#form-categoria-botones :hover {
   background-color: rgba(150, 150, 150, 0.7411764706);
   color: #000;
 }
+
 #form-producto-botones input,
-#form-producto-botones button, #form-categoria-botones input,
+#form-producto-botones button,
+#form-categoria-botones input,
 #form-categoria-botones button {
   padding: 10px;
   background-color: #EA1B25;
@@ -91,11 +110,13 @@ nav ul li a {
   border-radius: 10px;
 }
 
-#productos-submit:hover, #categorias-submit:hover {
+#productos-submit:hover,
+#categorias-submit:hover {
   background-color: #67A665;
 }
 
-#productos-reset:hover, #categorias-reset:hover {
+#productos-reset:hover,
+#categorias-reset:hover {
   background-color: #2764A9;
   color: #EAEAEA;
 }
@@ -108,4 +129,5 @@ nav ul li a {
 
     para link no seleccionado #969696
     para link seleccionado#ea1b25
-*//*# sourceMappingURL=estilos.css.map */
+*/
+/*# sourceMappingURL=estilos.css.map */

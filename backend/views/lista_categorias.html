@@ -3,21 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/estilos/estilos.css">
+    <link rel="stylesheet" href="../../assets/estilos/estilos.css">
     <title>Listado de Categorías</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="/views/home.html">Inicio</a></li>
-                <li><a href="/backend/views/lista_productos.html">Productos</a></li>
-                <li><a href="/backend/views/productos.html">Alta productos</a></li>
-                <li><a href="/backend/views/lista_categorias.html">Categorias</a></li>
-                <li><a href="/backend/views/categorias.html">Alta Categorias</a></li>
+                <li><a href="../../views/home.html">Inicio</a></li>
+                <li><a href="./lista_productos.html">Productos</a></li>
+                <li><a href="./productos.html">Alta productos</a></li>
+                <li><a href="./lista_categorias.html">Categorias</a></li>
+                <li><a href="./categorias.html">Alta Categorias</a></li>
             </ul>
         </nav>
     </header>
+
+    <main>
+        <h1>Listado de Categorías</h1>
+
+        <!-- CREATE TABLE RENDER -->
+        <div class="tabla">
+            <table>
+                <!-- TABLE HEAD -->
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <!-- TABLE BODY -->
+                <tbody>
+                    <?php foreach ($listaCategorias as $categoria) { ?>
+                    <tr>
+                        <td>
+                            <?php echo $categoria['id'] ?>
+                        </td>
+                        <td>
+                            <?php echo $categoria['nombre_categoria'] ?>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="./categorias.html">Agregar Categoría</a>
+    </main>
+
     <footer>
         <span>Manuel Achaval Copyright  © 2023</span>
     </footer>
