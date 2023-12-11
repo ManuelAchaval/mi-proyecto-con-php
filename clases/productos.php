@@ -73,6 +73,6 @@ class Productos{
 
     static public function product_select(){
         $db= new database(DRIVER,DB,HOST,USER,PASS);
-        return $db ->select("productos");
+        return $db ->select(TABLE);
     }
 }

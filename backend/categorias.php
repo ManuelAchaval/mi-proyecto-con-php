@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 include '../clases/autoload.php';
 
 if(isset($_POST['action'])&& $_POST['action']=='guardar'){
@@ -13,4 +15,5 @@ if(isset($_POST['action'])&& $_POST['action']=='guardar'){
 }
 
 $listaCategorias = Categorias::category_select();
+// var_dump($listaCategorias);
 include 'views/lista_categorias.html';

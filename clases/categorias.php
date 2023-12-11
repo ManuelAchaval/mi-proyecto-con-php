@@ -40,14 +40,16 @@ class Categorias{
         return $db->delete(TABLE,"id= ".$this->id);
     }
     public function category_insert(){
+
         $db= new database(DRIVER,DB,HOST,USER,PASS);
-        return $db->insert(TABLE,"nombre-categoria=? ","id=?",array($this->nombre));
+        $response = $db->insert(TABLE,"nombre_categoria=? ","id=?",array($this->nombre));
         
         if($response){
             $this->id=$response;
             $this->exists=true;
             return true;
-        }else{return false;}
+        }else{
+            return false;}
     }
 
     public function category_update(){

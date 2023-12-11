@@ -1,11 +1,14 @@
+<?php declare(strict_types=1) ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/estilos/estilos.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -20,9 +23,19 @@
     </header>
     <main>
         <h1>Bienvenidos</h1>
+        <?php foreach ($productos as $p) { ?>
+        <div>
+            <?php 
+            echo '<b>' . $p['nombre_producto'] . '</b><br>'; 
+            echo $p['descripcion_producto'] . '<br>'; 
+            echo '<b>Precio: </b>$' . $p['precio_producto'] . '<br>'; 
+        </div>
+        <?php } ?>
     </main>
+
     <footer>
-        <span>Manuel Achaval Copyright  © 2023</span>
+        <span>Manuel Achaval Copyright © 2023</span>
     </footer>
 </body>
+
 </html>

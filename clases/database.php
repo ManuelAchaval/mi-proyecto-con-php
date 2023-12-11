@@ -18,7 +18,7 @@ class database {
     }
     
     function select($tabla,$filtros=null, $arr_prepare=null,$order=null, $limit=null) {
-        $sql ="SELECT * FROM " .$tabla;
+        $sql ="SELECT * FROM " . $tabla;
 
         if($filtros!=null){$sql .= " WHERE " . $filtros;}
         if($order!=null){$sql .= " ORDER BY " . $order;}
@@ -50,14 +50,14 @@ class database {
             throw new Exception('Error al eliminar.');
         }
     }
-    function insert($tabla, $campos,$valores,$arr_prepare=null) {
-        $sql="INSERT INTO ". $tabla. "(" . $campos . ") VALUES ($valores)";
+    function insert($tabla, $campos,$valores,$arr_prepare = null) {
+        $sql = "INSERT INTO " . $tabla . "(" . $campos . ") VALUES ( ". $valores .")";
         
         $resource=$this->gbd-> prepare(sql);
         $resource->execute($arr_prepare);
 
         if($resource){
-            $this->gbd-lastInsertId();
+            $this->gbd->lastInsertId();
             return $resource->fetchAll(PDO::FETCH_ASSOC);
         }else {
             echo '<pre>';
